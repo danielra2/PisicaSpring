@@ -2,12 +2,14 @@ package mycode.pisicaspring.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="pisica")
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 // Am eliminat @Data și @ToString pentru a evita erorile de compilare.
 public class Pisica {
     @Id
