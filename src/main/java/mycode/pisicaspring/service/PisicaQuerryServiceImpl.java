@@ -5,6 +5,8 @@ import mycode.pisicaspring.exceptions.*;
 import mycode.pisicaspring.mappers.PisicaManualMapper;
 import mycode.pisicaspring.models.Pisica;
 import mycode.pisicaspring.repository.PisicaRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -20,9 +22,18 @@ public class PisicaQuerryServiceImpl implements PisicaQuerryService {
 
 
     @Override
-    public PisicaListRequest getAllPisici() {
-        List<Pisica> pisicaList=pisicaRepository.getAllPisica();
-        return new PisicaListRequest(this.pisicaManualMapper.mapperPisicaListToPisicaDtoList(pisicaList));
+    public PisicaListResponsePageable getAllPisici(int page,int size) {
+        PageRequest pageable=PageRequest.of(page,size);
+        Page<Pisica> pisicaPage=pisicaRepository.findAll(pageable);
+        List<PisicaResponse>pisicaDtoList=pisicaManualMapper.mapPisicaListToResponseList(pisicaPage.getContent());
+        return new PisicaListResponsePageable(
+                pisicaDtoList,
+                pisicaPage.getTotalElements(),
+                pisicaPage.getTotalPages(),
+                pisicaPage.getNumber(),
+                pisicaPage.getSize()
+        );
+
     }
 
     @Override

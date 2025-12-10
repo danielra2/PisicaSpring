@@ -47,6 +47,11 @@ public class PisicaManualMapper {
         );
     }
 
+    public List<PisicaResponse>mapPisicaListToResponseList(List<Pisica>list){
+        if(list==null)return List.of();
+        return list.stream().map(this::mapPisicaToPisicaResponse).toList();
+    }
+
 
       //Mapeaza o listă de DTO la o lista de entitati Pisica.
 

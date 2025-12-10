@@ -15,6 +15,9 @@ public class View {
     private final PisicaQuerryService pisicaQuerryService;
     private final PisicaCommandService pisicaCommandService;
     private final Scanner scanner;
+    private record PaginationInput(int page,int size){
+
+    }
 
 
     public View(PisicaCommandService pisicaCommandService, PisicaQuerryService pisicaQuerryService) {
@@ -92,6 +95,7 @@ public class View {
     }
 
     public void viewPisica() {
+
         PisicaListRequest pisicaListRequest = pisicaQuerryService.getAllPisici();
         if (pisicaListRequest == null || pisicaListRequest.pisicaDtoList() == null || pisicaListRequest.pisicaDtoList().isEmpty()) {
             System.out.println("Nu s-a gasit nicio pisica.");

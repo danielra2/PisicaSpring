@@ -3,6 +3,8 @@ package mycode.pisicaspring.repository;
 import mycode.pisicaspring.dtos.PisicaNumeVarstaDto;
 import mycode.pisicaspring.dtos.RasaAverageAgeInfo;
 import mycode.pisicaspring.models.Pisica;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -12,6 +14,9 @@ import java.util.Optional;
 public interface PisicaRepository extends JpaRepository<Pisica,Long> {
     @Query("select p from Pisica p")
     List<Pisica> getAllPisica();
+
+    Page<Pisica> findAll(Pageable pageable);
+
     Optional<Pisica> findByNumeAndRasa(String nume, String rasa);
 
     @Query("SELECT new mycode.pisicaspring.dtos.PisicaNumeVarstaDto(p.nume, p.varsta) FROM Pisica p WHERE p.varsta > :varstaMinima")

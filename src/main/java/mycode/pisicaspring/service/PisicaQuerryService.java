@@ -6,7 +6,7 @@ import mycode.pisicaspring.exceptions.*;
 import java.util.List;
 
 public interface PisicaQuerryService {
-    PisicaListRequest getAllPisici();
+    PisicaListResponsePageable getAllPisici(int page,int size);
 
 // alta modalitate(probabil gresita)
     List<PisicaNumeVarstaDto>getOlderPisiciInfo(int varstaMinima);
