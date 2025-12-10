@@ -12,11 +12,6 @@ public class PisicaSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(PisicaSpringApplication.class, args);
     }
-    @Bean
-    CommandLineRunner show(View view){
-        return args -> {
-            view.play();
-        };
-    }
+
 
 }
