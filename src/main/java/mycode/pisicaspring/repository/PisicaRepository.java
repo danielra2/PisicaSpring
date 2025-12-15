@@ -17,7 +17,7 @@ public interface PisicaRepository extends JpaRepository<Pisica,Long> {
     @Query("SELECT new mycode.pisicaspring.dtos.PisicaNumeVarstaDto(p.nume, p.varsta) FROM Pisica p WHERE p.varsta > :varstaMinima")
     List<PisicaNumeVarstaDto> findPisicasByVarstaGreaterThan(int varstaMinima);
 
-    Optional<Pisica>findByNume(String nume);
+    Optional<Pisica> findByNume(String nume);
     List<Pisica> findByVarstaBetween(int varstaMin, int varstaMax);
     List<Pisica>findAllByOrderByVarstaAsc();
     List<Pisica> findByRasaOrderByVarstaAsc(String rasa);

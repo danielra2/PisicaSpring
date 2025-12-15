@@ -21,19 +21,19 @@ public class PisicaController {
         this.pisicaQuerryService = pisicaQuerryService;
     }
 
-    @GetMapping
+    @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public PisicaListRequest getAllPisici() {
         return pisicaQuerryService.getAllPisici();
     }
 
-    @PostMapping
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public PisicaResponse createPisica(@Valid @RequestBody PisicaDto pisicaDto) {
         return pisicaCommandService.createPisica(pisicaDto);
     }
 
-    @DeleteMapping("/{nume}")
+    @DeleteMapping("/delete/{nume}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletePisica(@PathVariable String nume) {
         PisicaDto request = new PisicaDto("N/A", 0, nume);
