@@ -1,9 +1,10 @@
 package mycode.pisicaspring.dtos;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public record PisicaResponse (
-       @NotBlank(message = "id is required")
+       @NotNull(message = "id is required")
         Long id,
         @NotBlank(message = "rasa is required")
         String rasa,
@@ -13,5 +14,4 @@ public record PisicaResponse (
 ){
 
 }
-
 

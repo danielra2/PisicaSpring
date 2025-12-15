@@ -1,10 +1,12 @@
 package mycode.pisicaspring.controller;
 
 import mycode.pisicaspring.exceptions.*;
+import org.springframework.data.mapping.PropertyReferenceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.time.Instant;
 import java.util.Map;
@@ -21,6 +23,13 @@ public class PisicaExceptionHandler {
             RasaIsEmpty.class, NoPisicaFoundException.class, NoResultsTopQueryException.class})
     public ResponseEntity<Map<String, Object>> handleNotFound(RuntimeException ex) {
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    @ExceptionHandler({IllegalArgumentException.class,
+            MethodArgumentTypeMismatchException.class,
+            PropertyReferenceException.class})
+    public ResponseEntity<Map<String, Object>> handleBadRequest(Exception ex) {
+        return buildResponse(HttpStatus.BAD_REQUEST, "Parametrii furnizati sunt invalizi.");
     }
 
     @ExceptionHandler(Exception.class)

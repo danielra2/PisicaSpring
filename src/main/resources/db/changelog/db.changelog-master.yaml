@@ -1,0 +1,261 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-pisica-table
+      author: codex
+      changes:
+        - createTable:
+            tableName: pisica
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: rasa
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: varsta
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: nume
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 002-insert-pisici
+      author: codex
+      changes:
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Siamese"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Luna"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "British"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Maya"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Bengal"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Zoe"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Sphynx"}
+              - column: {name: varsta, valueNumeric: 5}
+              - column: {name: nume, value: "Nala"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Persian"}
+              - column: {name: varsta, valueNumeric: 1}
+              - column: {name: nume, value: "Cleo"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Maine Coon"}
+              - column: {name: varsta, valueNumeric: 6}
+              - column: {name: nume, value: "Leo"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Ragdoll"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Milo"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Scottish Fold"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Loki"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Norwegian Forest"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Oliver"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Chartreux"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Puffy"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Birman"}
+              - column: {name: varsta, valueNumeric: 5}
+              - column: {name: nume, value: "Azor"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Devon Rex"}
+              - column: {name: varsta, valueNumeric: 1}
+              - column: {name: nume, value: "Pixie"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Balinese"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Amber"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Oriental"}
+              - column: {name: varsta, valueNumeric: 6}
+              - column: {name: nume, value: "Indy"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "American Shorthair"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Piper"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Russian Blue"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Blue"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Turkish Angora"}
+              - column: {name: varsta, valueNumeric: 5}
+              - column: {name: nume, value: "Pearl"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Burmese"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Gizmo"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Savannah"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Nova"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Manx"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Rex"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Singapura"}
+              - column: {name: varsta, valueNumeric: 1}
+              - column: {name: nume, value: "Mochi"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Havana Brown"}
+              - column: {name: varsta, valueNumeric: 7}
+              - column: {name: nume, value: "Coco"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Bombay"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Salem"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Tonkinese"}
+              - column: {name: varsta, valueNumeric: 6}
+              - column: {name: nume, value: "Kona"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Japanese Bobtail"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Suki"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "LaPerm"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Wavy"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Korat"}
+              - column: {name: varsta, valueNumeric: 5}
+              - column: {name: nume, value: "Storm"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Ocicat"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Dot"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Pixie-bob"}
+              - column: {name: varsta, valueNumeric: 4}
+              - column: {name: nume, value: "Bob"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Selkirk Rex"}
+              - column: {name: varsta, valueNumeric: 1}
+              - column: {name: nume, value: "Curl"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Snowshoe"}
+              - column: {name: varsta, valueNumeric: 2}
+              - column: {name: nume, value: "Frost"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Toyger"}
+              - column: {name: varsta, valueNumeric: 3}
+              - column: {name: nume, value: "Stripe"}
+        - insert:
+            tableName: pisica
+            columns:
+              - column: {name: rasa, value: "Turkish Van"}
+              - column: {name: varsta, valueNumeric: 6}
+              - column: {name: nume, value: "River"}
+  - changeSet:
+      id: 003-create-query-audit-table
+      author: codex
+      changes:
+        - createTable:
+            tableName: query_audit_log
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: endpoint
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: metadata
+                  type: VARCHAR(2048)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false

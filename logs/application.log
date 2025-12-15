@@ -1,0 +1,42 @@
+2025-12-15 22:59:27.473 INFO  m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 98447 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 22:59:27.474 INFO  m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-15 22:59:28.830 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15 22:59:29.855 INFO  m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.541 seconds (process running for 2.891)
+2025-12-15 22:59:41.010 INFO  m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 98673 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 22:59:41.010 INFO  m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-15 22:59:42.184 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15 22:59:43.083 INFO  m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.236 seconds (process running for 2.556)
+2025-12-15 23:00:15.360 INFO  m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 98822 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:00:15.360 INFO  m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-15 23:00:17.441 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.255 seconds (process running for 2.454)
+2025-12-15 23:00:32.812 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {page=0, size=10, count=10}
+2025-12-15 23:00:33.082 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+2025-12-15 23:00:33.082 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table 'pisica_db.query_audit_log' doesn't exist
+2025-12-15 23:01:01.630 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {page=1, size=10, count=10}
+2025-12-15 23:01:01.635 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+2025-12-15 23:01:01.636 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table 'pisica_db.query_audit_log' doesn't exist
+2025-12-15 23:01:01.935 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {page=1, size=10, count=10}
+2025-12-15 23:01:01.939 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+2025-12-15 23:01:01.939 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table 'pisica_db.query_audit_log' doesn't exist
+2025-12-15 23:01:15.397 INFO  m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 99183 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:01:15.398 INFO  m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-15 23:01:16.683 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15 23:01:17.732 INFO  m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.484 seconds (process running for 2.796)
+2025-12-15 23:01:47.888 INFO  m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 99310 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:01:47.888 INFO  m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-15 23:01:50.318 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.609 seconds (process running for 2.815)
+2025-12-15 23:02:03.577 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {page=1, size=10, count=10}
+2025-12-15 23:03:01.784 INFO  m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 99722 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:03:01.785 INFO  m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-15 23:03:03.193 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-15 23:03:04.296 INFO  m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.679 seconds (process running for 3.007)
+2025-12-15 23:03:28.899 INFO  m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 99872 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:03:28.900 INFO  m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-15 23:03:31.097 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.373 seconds (process running for 2.574)
+2025-12-15 23:03:43.878 INFO  m.p.controller.PisicaController - GET /api/pisici requested: page=1, size=10, sort=id: ASC
+2025-12-15 23:03:43.954 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {page=1, size=10, count=10}
+2025-12-15 23:03:52.193 INFO  m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 99962 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-15 23:03:52.193 INFO  m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-15 23:03:54.440 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.428 seconds (process running for 2.637)
+2025-12-15 23:03:56.132 INFO  m.p.controller.PisicaController - GET /api/pisici requested: page=1, size=10, sort=id: ASC
+2025-12-15 23:03:56.199 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {count=10, size=10, page=1}

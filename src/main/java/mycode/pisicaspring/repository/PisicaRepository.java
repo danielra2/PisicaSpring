@@ -1,6 +1,5 @@
 package mycode.pisicaspring.repository;
 
-import mycode.pisicaspring.dtos.PisicaNumeVarstaDto;
 import mycode.pisicaspring.dtos.RasaAverageAgeInfo;
 import mycode.pisicaspring.models.Pisica;
 import org.springframework.data.domain.Page;
@@ -12,25 +11,30 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PisicaRepository extends JpaRepository<Pisica,Long> {
-    @Query("select p from Pisica p")
-    List<Pisica> getAllPisica();
-
-    Page<Pisica> findAll(Pageable pageable);
 
     Optional<Pisica> findByNumeAndRasa(String nume, String rasa);
 
-    @Query("SELECT new mycode.pisicaspring.dtos.PisicaNumeVarstaDto(p.nume, p.varsta) FROM Pisica p WHERE p.varsta > :varstaMinima")
-    List<PisicaNumeVarstaDto> findPisicasByVarstaGreaterThan(int varstaMinima);
-
     Optional<Pisica> findByNume(String nume);
-    List<Pisica> findByVarstaBetween(int varstaMin, int varstaMax);
-    List<Pisica>findAllByOrderByVarstaAsc();
-    List<Pisica> findByRasaOrderByVarstaAsc(String rasa);
+
+    Page<Pisica> findByVarstaGreaterThan(int varstaMinima, Pageable pageable);
+
+    Page<Pisica> findByVarstaBetween(int varstaMin, int varstaMax, Pageable pageable);
+
+    Page<Pisica> findByRasaOrderByVarstaAsc(String rasa, Pageable pageable);
+
     List<Pisica> findTop3ByOrderByVarstaAsc();
-    List<Pisica> findByNumeStartingWith(String nume);
-    List<Pisica> findByVarsta(int varsta);
+
+    Page<Pisica> findByNumeStartingWith(String nume, Pageable pageable);
+
+    Page<Pisica> findByVarsta(int varsta, Pageable pageable);
+
     List<Pisica> findTop5ByOrderByVarstaDesc();
-    @Query("SELECT new mycode.pisicaspring.dtos.RasaAverageAgeInfo(p.rasa, AVG(p.varsta)) FROM Pisica p GROUP BY p.rasa")
-    List<RasaAverageAgeInfo> findRasaAverageAge();
+
+    @Query(value = "SELECT DISTINCT p.rasa FROM Pisica p", countQuery = "SELECT COUNT(DISTINCT p.rasa) FROM Pisica p")
+    Page<String> findDistinctRase(Pageable pageable);
+
+    @Query(value = "SELECT new mycode.pisicaspring.dtos.RasaAverageAgeInfo(p.rasa, AVG(p.varsta)) FROM Pisica p GROUP BY p.rasa",
+            countQuery = "SELECT COUNT(DISTINCT p.rasa) FROM Pisica p")
+    Page<RasaAverageAgeInfo> findRasaAverageAge(Pageable pageable);
 
 }
