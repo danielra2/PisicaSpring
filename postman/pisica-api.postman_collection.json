@@ -11,9 +11,14 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{baseUrl}}/api/pisici",
+          "raw": "{{baseUrl}}/api/pisici?page={{page}}&size={{size}}&sort={{sort}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici"]
+          "path": ["api", "pisici"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"},
+            {"key": "sort", "value": "{{sort}}"}
+          ]
         }
       }
     },
@@ -29,9 +34,9 @@
           "raw": "{\n  \"rasa\": \"Siamese\",\n  \"varsta\": 2,\n  \"nume\": \"Luna\"\n}"
         },
         "url": {
-          "raw": "{{baseUrl}}/api/pisici",
+          "raw": "{{baseUrl}}/api/pisici/add",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici"]
+          "path": ["api", "pisici", "add"]
         }
       }
     },
@@ -47,12 +52,9 @@
           "raw": "{\n  \"rasa\": \"British Shorthair\",\n  \"varsta\": 5,\n  \"nume\": \"Mira\"\n}"
         },
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/{currentName}",
+          "raw": "{{baseUrl}}/api/pisici/{{currentName}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", ":currentName"],
-          "variable": [
-            {"key": "currentName", "value": "Luna"}
-          ]
+          "path": ["api", "pisici", "{{currentName}}"]
         }
       }
     },
@@ -62,12 +64,9 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/{nume}",
+          "raw": "{{baseUrl}}/api/pisici/delete/{{nume}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", ":nume"],
-          "variable": [
-            {"key": "nume", "value": "Luna"}
-          ]
+          "path": ["api", "pisici", "delete", "{{nume}}"]
         }
       }
     },
@@ -76,9 +75,13 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/older-than/5",
+          "raw": "{{baseUrl}}/api/pisici/older-than/{{varstaMinima}}?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "older-than", "5"]
+          "path": ["api", "pisici", "older-than", "{{varstaMinima}}"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
+          ]
         }
       }
     },
@@ -87,9 +90,13 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/rase/unice",
+          "raw": "{{baseUrl}}/api/pisici/rase/unice?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "rase", "unice"]
+          "path": ["api", "pisici", "rase", "unice"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
+          ]
         }
       }
     },
@@ -98,12 +105,14 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/varsta?min=1&max=8",
+          "raw": "{{baseUrl}}/api/pisici/varsta?min={{varstaMin}}&max={{varstaMax}}&page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
           "path": ["api", "pisici", "varsta"],
           "query": [
-            {"key": "min", "value": "1"},
-            {"key": "max", "value": "8"}
+            {"key": "min", "value": "{{varstaMin}}"},
+            {"key": "max", "value": "{{varstaMax}}"},
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
           ]
         }
       }
@@ -113,9 +122,13 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/ordered-by-varsta",
+          "raw": "{{baseUrl}}/api/pisici/ordered-by-varsta?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "ordered-by-varsta"]
+          "path": ["api", "pisici", "ordered-by-varsta"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
+          ]
         }
       }
     },
@@ -124,11 +137,12 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/rasa/{rasa}/ordered-by-varsta",
+          "raw": "{{baseUrl}}/api/pisici/rasa/{{rasa}}/ordered-by-varsta?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "rasa", ":rasa", "ordered-by-varsta"],
-          "variable": [
-            {"key": "rasa", "value": "Siamese"}
+          "path": ["api", "pisici", "rasa", "{{rasa}}", "ordered-by-varsta"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
           ]
         }
       }
@@ -149,11 +163,12 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/nume/incepe-cu/{prefix}",
+          "raw": "{{baseUrl}}/api/pisici/nume/incepe-cu/{{prefix}}?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "nume", "incepe-cu", ":prefix"],
-          "variable": [
-            {"key": "prefix", "value": "Lu"}
+          "path": ["api", "pisici", "nume", "incepe-cu", "{{prefix}}"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
           ]
         }
       }
@@ -163,11 +178,12 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/varsta/{varstaExacta}",
+          "raw": "{{baseUrl}}/api/pisici/varsta/{{varstaExacta}}?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "varsta", ":varstaExacta"],
-          "variable": [
-            {"key": "varstaExacta", "value": "3"}
+          "path": ["api", "pisici", "varsta", "{{varstaExacta}}"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
           ]
         }
       }
@@ -188,14 +204,29 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/pisici/rase/varsta-medie",
+          "raw": "{{baseUrl}}/api/pisici/rase/varsta-medie?page={{page}}&size={{size}}",
           "host": ["{{baseUrl}}"],
-          "path": ["api", "pisici", "rase", "varsta-medie"]
+          "path": ["api", "pisici", "rase", "varsta-medie"],
+          "query": [
+            {"key": "page", "value": "{{page}}"},
+            {"key": "size", "value": "{{size}}"}
+          ]
         }
       }
     }
   ],
   "variable": [
-    {"key": "baseUrl", "value": "http://localhost:8080"}
+    {"key": "baseUrl", "value": "http://localhost:8080"},
+    {"key": "page", "value": "0"},
+    {"key": "size", "value": "10"},
+    {"key": "sort", "value": "id,asc"},
+    {"key": "currentName", "value": "Luna"},
+    {"key": "nume", "value": "Luna"},
+    {"key": "varstaMinima", "value": "5"},
+    {"key": "varstaMin", "value": "1"},
+    {"key": "varstaMax", "value": "8"},
+    {"key": "rasa", "value": "Siamese"},
+    {"key": "prefix", "value": "Lu"},
+    {"key": "varstaExacta", "value": "3"}
   ]
 }
