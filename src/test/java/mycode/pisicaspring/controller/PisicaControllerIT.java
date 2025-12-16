@@ -35,8 +35,8 @@ class PisicaControllerIT {
 
     @Test
     void getAllPisiciReturnsPagedResults() throws Exception {
-        repository.save(new Pisica(null, "Siamese", 2, "Luna"));
-        repository.save(new Pisica(null, "British", 4, "Maya"));
+        repository.save(pisica("Siamese", 2, "Luna"));
+        repository.save(pisica("British", 4, "Maya"));
 
         mockMvc.perform(get("/api/pisici")
                         .param("page", "0")
@@ -65,7 +65,7 @@ class PisicaControllerIT {
 
     @Test
     void invalidSortParameterShouldReturnBadRequest() throws Exception {
-        repository.save(new Pisica(null, "Siamese", 2, "Luna"));
+        repository.save(pisica("Siamese", 2, "Luna"));
 
         mockMvc.perform(get("/api/pisici")
                         .param("page", "0")
@@ -73,5 +73,13 @@ class PisicaControllerIT {
                         .param("sort", "string"))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.error").value("Parametrii furnizati sunt invalizi."));
+    }
+
+    private Pisica pisica(String rasa, int varsta, String nume) {
+        Pisica entity = new Pisica();
+        entity.setRasa(rasa);
+        entity.setVarsta(varsta);
+        entity.setNume(nume);
+        return entity;
     }
 }

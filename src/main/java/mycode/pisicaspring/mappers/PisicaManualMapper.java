@@ -4,82 +4,78 @@ import mycode.pisicaspring.dtos.*;
 import mycode.pisicaspring.models.Pisica;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Function;
 
 @Component
 public class PisicaManualMapper {
 
-
-     //mapeaza de la PisicaDto la entitatea Pisica
-
+    // Mapeaza de la PisicaDto la entitatea Pisica
     public Pisica mapPisicaDtoToPisica(PisicaDto dto) {
         Objects.requireNonNull(dto, "dto is null");
-        var e = new Pisica();
-        e.setRasa(trim(dto.rasa()));
-        e.setVarsta(dto.varsta());
-        e.setNume(trim(dto.nume()));
-        return e;
+        var entity = new Pisica();
+        updatePisicaFromDto(dto, entity);
+        return entity;
     }
 
+    public void updatePisicaFromDto(PisicaDto dto, Pisica target) {
+        Objects.requireNonNull(dto, "dto is null");
+        Objects.requireNonNull(target, "target is null");
+        target.setRasa(trim(dto.rasa()));
+        target.setVarsta(dto.varsta());
+        target.setNume(trim(dto.nume()));
+    }
 
-     // Mapeaza de la entitatea Pisica la PisicaDtoa
-
+    // Mapeaza de la entitatea Pisica la PisicaDto
     public PisicaDto mapPisicaToPisicaDto(Pisica e) {
         Objects.requireNonNull(e, "entity is null");
         return new PisicaDto(
-                nvl(e.getRasa()),
+                cleanText(e.getRasa()),
                 e.getVarsta(),
-                nvl(e.getNume())
+                cleanText(e.getNume())
         );
     }
 
-
-    //  Mapeaza de la entitatea Pisica la PisicaResponsea
-
+    //  Mapeaza de la entitatea Pisica la PisicaResponse
     public PisicaResponse mapPisicaToPisicaResponse(Pisica e) {
         Objects.requireNonNull(e, "entity is null");
         return new PisicaResponse(
                 e.getId(),
-                nvl(e.getRasa()),
+                cleanText(e.getRasa()),
                 e.getVarsta(),
-                nvl(e.getNume())
+                cleanText(e.getNume())
         );
     }
 
-    public List<PisicaResponse>mapPisicaListToResponseList(List<Pisica>list){
-        if(list==null)return List.of();
-        return list.stream().map(this::mapPisicaToPisicaResponse).toList();
+    public List<PisicaResponse> mapPisicaListToResponseList(List<Pisica> list) {
+        return mapList(list, this::mapPisicaToPisicaResponse);
     }
 
-
-      //Mapeaza o listă de DTO la o lista de entitati Pisica.
-
+    //Mapeaza o listă de DTO la o lista de entitati Pisica.
     public List<Pisica> mapPisiciDtoListToPisicaList(List<PisicaDto> list) {
-        if (list == null) return List.of();
-        return list.stream().filter(Objects::nonNull).map(this::mapPisicaDtoToPisica).toList();
+        return mapList(list, this::mapPisicaDtoToPisica);
     }
 
-
-     // Mapeaza o lista de entitati Pisica la o lista de DTO-uri.
-
+    // Mapeaza o lista de entitati Pisica la o lista de DTO-uri.
     public List<PisicaDto> mapperPisicaListToPisicaDtoList(List<Pisica> list) {
-        if (list == null) return List.of();
-        return list.stream().filter(Objects::nonNull).map(this::mapPisicaToPisicaDto).toList();
+        return mapList(list, this::mapPisicaToPisicaDto);
     }
 
     public PisicaRasaInfo mapPisicaToRasaInfo(Pisica e) {
         Objects.requireNonNull(e, "entity is null");
-        return new PisicaRasaInfo(
-                nvl(e.getRasa())
-        );
+        return new PisicaRasaInfo(cleanText(e.getRasa()));
     }
 
     public List<PisicaRasaInfo> mapperPisicaListToRasaInfoList(List<Pisica> list) {
-        if (list == null) return List.of();
-        return list.stream()
-                .filter(Objects::nonNull)
-                .map(this::mapPisicaToRasaInfo)
+        return mapList(list, this::mapPisicaToRasaInfo).stream()
+                .distinct()
+                .toList();
+    }
+
+    public List<PisicaRasaInfo> mapRasaListToRasaInfoList(List<String> rase) {
+        return mapList(rase, rasa -> new PisicaRasaInfo(cleanText(rasa))).stream()
                 .distinct()
                 .toList();
     }
@@ -87,59 +83,54 @@ public class PisicaManualMapper {
     public PisicaVarstaRangeInfo mapPisicaToVarstaRangeInfo(Pisica e) {
         Objects.requireNonNull(e, "entity is null");
         return new PisicaVarstaRangeInfo(
-                nvl(e.getNume()),
-                nvl(e.getRasa()),
+                cleanText(e.getNume()),
+                cleanText(e.getRasa()),
                 e.getVarsta()
         );
     }
+
     public List<PisicaVarstaRangeInfo> mapperPisicaListToVarstaRangeInfoList(List<Pisica> list) {
-        if (list == null) return List.of();
-        // Aplicăm maparea 1-la-1
-        return list.stream()
-                .filter(Objects::nonNull)
-                .map(this::mapPisicaToVarstaRangeInfo)
-                .toList(); // Nu este necesar distinct aici
+        return mapList(list, this::mapPisicaToVarstaRangeInfo);
     }
 
     public PisicaNumeVarstaInfo mapPisicaToNumeVarstaInfo(Pisica e) {
         Objects.requireNonNull(e, "entity is null");
         return new PisicaNumeVarstaInfo(
-                nvl(e.getNume()),
+                cleanText(e.getNume()),
                 e.getVarsta()
         );
     }
 
     public List<PisicaNumeVarstaInfo> mapperPisicaListToNumeVarstaInfoList(List<Pisica> list) {
-        if (list == null) return List.of();
-        // Folosim maparea 1-la-1 cerută
-        return list.stream()
-                .filter(Objects::nonNull)
-                .map(this::mapPisicaToNumeVarstaInfo)
-                .toList();
+        return mapList(list, this::mapPisicaToNumeVarstaInfo);
     }
 
-
-    public PisicaNumeRasaInfo mapPisicaToNumeRasaInfo(Pisica e){
-        Objects.requireNonNull(e,"entity is null");
-        return new PisicaNumeRasaInfo(nvl(e.getNume()),nvl(e.getRasa()));
-    }
-    public List<PisicaNumeRasaInfo> mapperPisicaListToNumeRasaInfoList(List<Pisica> list){
-        if(list==null)return List.of();
-        return list.stream().filter(Objects::nonNull).map(this::mapPisicaToNumeRasaInfo).toList();
+    public PisicaNumeRasaInfo mapPisicaToNumeRasaInfo(Pisica e) {
+        Objects.requireNonNull(e, "entity is null");
+        return new PisicaNumeRasaInfo(cleanText(e.getNume()), cleanText(e.getRasa()));
     }
 
-
-
-
-    public PisicaIdNumeRasaInfo mapPisicaToIdNumeRasaInfo(Pisica e){
-        Objects.requireNonNull(e,"entity is null");
-        return new PisicaIdNumeRasaInfo(e.getId(),nvl(e.getNume()),nvl(e.getRasa()));
-    }
-    public List<PisicaIdNumeRasaInfo> mapperPisicaListToIdNumeRasaInfoList(List<Pisica> list){
-        if(list==null)return List.of();
-        return list.stream().filter(Objects::nonNull).map(this::mapPisicaToIdNumeRasaInfo).toList();
+    public List<PisicaNumeRasaInfo> mapperPisicaListToNumeRasaInfoList(List<Pisica> list) {
+        return mapList(list, this::mapPisicaToNumeRasaInfo);
     }
 
+    public PisicaIdNumeRasaInfo mapPisicaToIdNumeRasaInfo(Pisica e) {
+        Objects.requireNonNull(e, "entity is null");
+        return new PisicaIdNumeRasaInfo(e.getId(), cleanText(e.getNume()), cleanText(e.getRasa()));
+    }
+
+    public List<PisicaIdNumeRasaInfo> mapperPisicaListToIdNumeRasaInfoList(List<Pisica> list) {
+        return mapList(list, this::mapPisicaToIdNumeRasaInfo);
+    }
+
+    public PisicaNumeVarstaDto mapPisicaToPisicaNumeVarstaDto(Pisica e) {
+        Objects.requireNonNull(e, "entity is null");
+        return new PisicaNumeVarstaDto(cleanText(e.getNume()), e.getVarsta());
+    }
+
+    public List<PisicaNumeVarstaDto> mapPisicaListToPisicaNumeVarstaDtoList(List<Pisica> list) {
+        return mapList(list, this::mapPisicaToPisicaNumeVarstaDto);
+    }
 
     // Metode utilitare
     private static String trim(String s) {
@@ -148,5 +139,19 @@ public class PisicaManualMapper {
 
     private static String nvl(String s) {
         return s == null ? "" : s;
+    }
+
+    private static String cleanText(String s) {
+        return nvl(trim(s));
+    }
+
+    private static <S, T> List<T> mapList(Collection<S> list, Function<S, T> mapper) {
+        if (list == null || list.isEmpty()) {
+            return List.of();
+        }
+        return list.stream()
+                .filter(Objects::nonNull)
+                .map(mapper)
+                .toList();
     }
 }

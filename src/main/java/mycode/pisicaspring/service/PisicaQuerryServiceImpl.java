@@ -44,9 +44,7 @@ public class PisicaQuerryServiceImpl implements PisicaQuerryService {
         Pageable effective = pageable == null ? Pageable.unpaged() : pageable;
         log.debug("Caut pisici mai batrane de {} ani", varstaMinima);
         Page<Pisica> pisicaPage = pisicaRepository.findByVarstaGreaterThan(varstaMinima, effective);
-        return pisicaPage.getContent().stream()
-                .map(p -> new PisicaNumeVarstaDto(p.getNume(), p.getVarsta()))
-                .toList();
+        return pisicaManualMapper.mapPisicaListToPisicaNumeVarstaDtoList(pisicaPage.getContent());
     }
 
     @Override
@@ -57,9 +55,7 @@ public class PisicaQuerryServiceImpl implements PisicaQuerryService {
             log.warn("Nu exista rase in baza de date");
             throw new RasaIsEmpty();
         }
-        List<PisicaRasaInfo> raseInfoList = rasaPage.getContent().stream()
-                .map(PisicaRasaInfo::new)
-                .toList();
+        List<PisicaRasaInfo> raseInfoList = pisicaManualMapper.mapRasaListToRasaInfoList(rasaPage.getContent());
 
         return new PisicaRasaListRequest(raseInfoList);
     }

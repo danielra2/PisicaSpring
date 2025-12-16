@@ -63,9 +63,7 @@ public class PisicaCommandServiceImpl implements PisicaCommandService {
         }
         log.info("Actualizez pisica {}", currentName);
         Pisica existingPisica=pisicaOptional.get();
-        existingPisica.setNume(pisicaDto.nume());
-        existingPisica.setRasa(pisicaDto.rasa());
-        existingPisica.setVarsta(pisicaDto.varsta());
+        mapper.updatePisicaFromDto(pisicaDto, existingPisica);
 
         existingPisica=pisicaRepository.save(existingPisica);
 

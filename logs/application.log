@@ -129,3 +129,207 @@
 2025-12-16 15:58:03.881 INFO  [d0b4f399-52e1-4d47-9dfc-3210ae83a415] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 10 ms
 2025-12-16 15:58:03.892 INFO  [3a1bc9b2-1421-477c-a8b1-d7b29468223a] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
 2025-12-16 15:58:04.065 INFO  [3a1bc9b2-1421-477c-a8b1-d7b29468223a] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 173 ms
+2025-12-16 16:26:54.570 INFO  [] m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 43089 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 16:26:54.571 INFO  [] m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-16 16:26:55.931 WARN  [] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-16 16:26:56.895 INFO  [] m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.501 seconds (process running for 2.908)
+2025-12-16 16:27:05.239 INFO  [] m.p.PisicaSpringApplicationTests - Starting PisicaSpringApplicationTests using Java 21.0.8 with PID 43321 (started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 16:27:05.240 INFO  [] m.p.PisicaSpringApplicationTests - The following 1 profile is active: "test"
+2025-12-16 16:27:06.476 WARN  [] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-16 16:27:07.479 INFO  [] m.p.PisicaSpringApplicationTests - Started PisicaSpringApplicationTests in 2.391 seconds (process running for 2.773)
+2025-12-16 16:30:37.709 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 44408 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 16:30:37.710 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 16:30:38.754 ERROR [] liquibase.changelog - ChangeSet db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode encountered an exception.
+liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:267)
+	at liquibase.Scope.child(Scope.java:271)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333)
+	at liquibase.Liquibase.update(Liquibase.java:205)
+	at liquibase.Liquibase.update(Liquibase.java:188)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at mycode.pisicaspring.PisicaSpringApplication.main(PisicaSpringApplication.java:12)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'pisica' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491)
+	... 65 common frames omitted
+2025-12-16 16:30:39.045 WARN  [] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+2025-12-16 16:30:39.060 ERROR [] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at mycode.pisicaspring.PisicaSpringApplication.main(PisicaSpringApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	... 10 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 17 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333)
+	at liquibase.Liquibase.update(Liquibase.java:205)
+	at liquibase.Liquibase.update(Liquibase.java:188)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271)
+	... 19 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:155)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 37 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-master.yaml::001-create-pisica-table::mycode:
+     Reason: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:840)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:267)
+	at liquibase.Scope.child(Scope.java:271)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91)
+	... 45 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Table 'pisica' already exists [Failed SQL: (1050) CREATE TABLE pisica_db.pisica (id BIGINT AUTO_INCREMENT NOT NULL, rasa VARCHAR(255) NOT NULL, varsta INT NOT NULL, nume VARCHAR(255) NOT NULL, CONSTRAINT PK_PISICA PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790)
+	... 60 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'pisica' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491)
+	... 65 common frames omitted
+2025-12-16 16:30:53.887 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 44471 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 16:30:53.888 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 16:30:56.334 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.622 seconds (process running for 2.83)
+2025-12-16 16:31:12.123 INFO  [2daa0d74-840f-4edb-b756-66dcb3cf567f] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 16:31:12.141 INFO  [2daa0d74-840f-4edb-b756-66dcb3cf567f] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/index.html with status 304 in 18 ms
+2025-12-16 16:31:12.160 INFO  [42766c8c-ff47-4c6c-b161-799d13351b62] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/swagger-initializer.js from 0:0:0:0:0:0:0:1
+2025-12-16 16:31:12.205 INFO  [42766c8c-ff47-4c6c-b161-799d13351b62] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/swagger-initializer.js with status 200 in 45 ms
+2025-12-16 16:31:12.276 INFO  [d8a33848-7ab5-4777-a2df-3830ac55d6db] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/swagger-config from 0:0:0:0:0:0:0:1
+2025-12-16 16:31:12.298 INFO  [d8a33848-7ab5-4777-a2df-3830ac55d6db] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 22 ms
+2025-12-16 16:31:12.310 INFO  [487bd801-d981-40ff-8baa-3178a29d8be0] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
+2025-12-16 16:31:12.522 INFO  [487bd801-d981-40ff-8baa-3178a29d8be0] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 212 ms
+2025-12-16 16:31:16.606 INFO  [3fbb3755-70c7-4739-ab24-8582db1cba04] m.p.logging.RequestLoggingFilter - Incoming GET /api/pisici?page=0&size=10&sort=id%2CASC from 0:0:0:0:0:0:0:1
+2025-12-16 16:31:16.614 INFO  [3fbb3755-70c7-4739-ab24-8582db1cba04] m.p.controller.PisicaController - GET /api/pisici requested: page=0, size=10, sort=id: ASC
+2025-12-16 16:31:16.711 INFO  [3fbb3755-70c7-4739-ab24-8582db1cba04] m.p.logging.RequestLoggingFilter - Completed GET /api/pisici?page=0&size=10&sort=id%2CASC with status 200 in 105 ms
