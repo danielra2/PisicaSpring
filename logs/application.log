@@ -40,3 +40,92 @@
 2025-12-15 23:03:54.440 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.428 seconds (process running for 2.637)
 2025-12-15 23:03:56.132 INFO  m.p.controller.PisicaController - GET /api/pisici requested: page=1, size=10, sort=id: ASC
 2025-12-15 23:03:56.199 INFO  m.p.audit.QueryAuditService - Query endpoint invoked: GET /api/pisici - {count=10, size=10, page=1}
+2025-12-16 15:48:01.674 INFO  m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 27001 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:48:01.675 INFO  m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:48:04.295 INFO  m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.801 seconds (process running for 3.008)
+2025-12-16 15:51:16.468 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 27792 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:51:16.468 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:51:18.867 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.576 seconds (process running for 2.791)
+2025-12-16 15:52:17.494 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 28023 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:52:17.495 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:52:19.669 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.358 seconds (process running for 2.565)
+2025-12-16 15:52:56.719 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 28175 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:52:56.719 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:52:58.885 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.347 seconds (process running for 2.556)
+2025-12-16 15:54:21.836 INFO  [dcdad2fe-d0ba-4af7-ad50-0a1aefbe97cf] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:54:21.910 INFO  [dcdad2fe-d0ba-4af7-ad50-0a1aefbe97cf] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 74 ms
+2025-12-16 15:55:29.236 INFO  [f241684b-e3b2-406c-8e4d-fa6a8f8a0d38] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:55:29.243 INFO  [f241684b-e3b2-406c-8e4d-fa6a8f8a0d38] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 7 ms
+2025-12-16 15:55:33.155 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 28845 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:55:33.156 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:55:35.359 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.389 seconds (process running for 2.594)
+2025-12-16 15:55:35.417 INFO  [086dbacb-d2bd-4d8b-ba89-cb5a8cb222a0] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:55:35.443 INFO  [086dbacb-d2bd-4d8b-ba89-cb5a8cb222a0] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 26 ms
+2025-12-16 15:55:36.471 INFO  [9caa59f3-08d3-4087-8275-b1ac070df9d6] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:55:36.477 INFO  [9caa59f3-08d3-4087-8275-b1ac070df9d6] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 6 ms
+2025-12-16 15:55:37.172 INFO  [d84c8ff2-191c-4b51-9f98-5d7f2798b84a] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:55:37.176 INFO  [d84c8ff2-191c-4b51-9f98-5d7f2798b84a] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 4 ms
+2025-12-16 15:56:05.434 INFO  [17c4eb52-e9f8-49b3-9add-8497a7252721] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:05.441 INFO  [17c4eb52-e9f8-49b3-9add-8497a7252721] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 7 ms
+2025-12-16 15:56:05.983 INFO  [4379f371-7ea8-43d1-8126-dac29ea4fc77] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:05.988 INFO  [4379f371-7ea8-43d1-8126-dac29ea4fc77] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 500 in 4 ms
+2025-12-16 15:56:48.544 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 29184 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:56:48.544 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:56:50.775 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.414 seconds (process running for 2.621)
+2025-12-16 15:56:51.669 INFO  [f71b0e9f-502b-4269-9af7-198b27fb0ea4] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.685 INFO  [f71b0e9f-502b-4269-9af7-198b27fb0ea4] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui with status 302 in 16 ms
+2025-12-16 15:56:51.691 INFO  [2f1ceee1-3183-4f36-88e9-c1c8e3c88ee9] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.708 INFO  [2f1ceee1-3183-4f36-88e9-c1c8e3c88ee9] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui.html with status 302 in 17 ms
+2025-12-16 15:56:51.714 INFO  [b3ed8a4b-f410-480c-b1ef-5c03386c63cd] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.717 INFO  [b3ed8a4b-f410-480c-b1ef-5c03386c63cd] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/index.html with status 304 in 3 ms
+2025-12-16 15:56:51.731 INFO  [0ca4078c-b848-4b05-9242-82776a45c33e] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-initializer.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.745 INFO  [0ca4078c-b848-4b05-9242-82776a45c33e] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-initializer.js with status 200 in 14 ms
+2025-12-16 15:56:51.771 INFO  [7f930cd2-45bc-44d1-a524-8f9c1c44301d] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/swagger-config from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.787 INFO  [7f930cd2-45bc-44d1-a524-8f9c1c44301d] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 16 ms
+2025-12-16 15:56:51.795 INFO  [cd4cff84-802a-4f77-a4db-9b75f552dc06] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:51.950 INFO  [cd4cff84-802a-4f77-a4db-9b75f552dc06] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 155 ms
+2025-12-16 15:56:52.938 INFO  [3578500f-8220-419d-a390-5a41315446e7] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:52.942 INFO  [3578500f-8220-419d-a390-5a41315446e7] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/index.html with status 304 in 4 ms
+2025-12-16 15:56:52.956 INFO  [81038171-c327-4d71-a61e-e2b575884ce9] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-initializer.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:52.961 INFO  [81038171-c327-4d71-a61e-e2b575884ce9] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-initializer.js with status 200 in 5 ms
+2025-12-16 15:56:52.981 INFO  [c6886060-b827-463d-9bf4-70582acfb332] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/swagger-config from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:52.983 INFO  [c6886060-b827-463d-9bf4-70582acfb332] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 2 ms
+2025-12-16 15:56:52.991 INFO  [20911594-d02b-48ee-82f6-12d43ccadcb0] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:52.998 INFO  [20911594-d02b-48ee-82f6-12d43ccadcb0] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 7 ms
+2025-12-16 15:56:54.125 INFO  [93eb96e1-36ed-44b5-a711-657bc12b4a4c] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:54.127 INFO  [93eb96e1-36ed-44b5-a711-657bc12b4a4c] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/index.html with status 304 in 2 ms
+2025-12-16 15:56:54.138 INFO  [2b6fc096-4c8e-476a-a2c7-43945b4792e6] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-initializer.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:54.141 INFO  [2b6fc096-4c8e-476a-a2c7-43945b4792e6] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-initializer.js with status 200 in 3 ms
+2025-12-16 15:56:54.165 INFO  [3195a050-d8e4-4b70-a77d-7d3bed5f3c21] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/swagger-config from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:54.168 INFO  [3195a050-d8e4-4b70-a77d-7d3bed5f3c21] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 3 ms
+2025-12-16 15:56:54.176 INFO  [a0d0ecac-203d-4884-8525-e798eb57650f] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
+2025-12-16 15:56:54.183 INFO  [a0d0ecac-203d-4884-8525-e798eb57650f] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 7 ms
+2025-12-16 15:57:22.315 INFO  [e2a08274-a65b-4741-8574-1f63f054e897] m.p.logging.RequestLoggingFilter - Incoming GET /api/pisici?page=1&size=10&sort=id%2CASC from 0:0:0:0:0:0:0:1
+2025-12-16 15:57:22.321 INFO  [e2a08274-a65b-4741-8574-1f63f054e897] m.p.controller.PisicaController - GET /api/pisici requested: page=1, size=10, sort=id: ASC
+2025-12-16 15:57:22.434 INFO  [e2a08274-a65b-4741-8574-1f63f054e897] m.p.logging.RequestLoggingFilter - Completed GET /api/pisici?page=1&size=10&sort=id%2CASC with status 200 in 119 ms
+2025-12-16 15:57:33.781 INFO  [] m.p.PisicaSpringApplication - Starting PisicaSpringApplication using Java 21.0.8 with PID 29387 (/Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici/target/classes started by bogdandaniel in /Users/bogdandaniel/Documents/proiecte-elevi/daniel-crud-api-pisici)
+2025-12-16 15:57:33.782 INFO  [] m.p.PisicaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-16 15:57:36.052 INFO  [] m.p.PisicaSpringApplication - Started PisicaSpringApplication in 2.487 seconds (process running for 2.703)
+2025-12-16 15:58:00.547 INFO  [4a1dc002-5305-4b4f-bce6-17b416bc7883] m.p.logging.RequestLoggingFilter - Incoming GET /api/pisici?page=1&size=10&sort=id%2CASC from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:00.567 INFO  [4a1dc002-5305-4b4f-bce6-17b416bc7883] m.p.controller.PisicaController - GET /api/pisici requested: page=1, size=10, sort=id: ASC
+2025-12-16 15:58:00.654 INFO  [4a1dc002-5305-4b4f-bce6-17b416bc7883] m.p.logging.RequestLoggingFilter - Completed GET /api/pisici?page=1&size=10&sort=id%2CASC with status 200 in 107 ms
+2025-12-16 15:58:03.731 INFO  [f2087929-882c-4fd9-8a27-02984e76791f] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.763 INFO  [f2087929-882c-4fd9-8a27-02984e76791f] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/index.html with status 302 in 32 ms
+2025-12-16 15:58:03.768 INFO  [1b89c9d2-7ce9-4e67-a188-f9d17bb874fa] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/index.html from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.774 INFO  [1b89c9d2-7ce9-4e67-a188-f9d17bb874fa] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/index.html with status 200 in 6 ms
+2025-12-16 15:58:03.793 INFO  [c8b5c8e8-a51e-4296-b967-18ac708232b4] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/swagger-ui.css from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.793 INFO  [9ef6fded-104a-439c-9bc7-6ce6708cd2b2] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/index.css from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.793 INFO  [a10ef280-8322-4ae5-8738-8e58cf4ab937] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/swagger-ui-bundle.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.793 INFO  [295f854c-f9f5-4b3a-b0ff-769ad0100161] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/swagger-ui-standalone-preset.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.793 INFO  [768b6fac-de07-4d3f-80ca-0c59a2224fcd] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/swagger-initializer.js from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.796 INFO  [9ef6fded-104a-439c-9bc7-6ce6708cd2b2] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/index.css with status 200 in 3 ms
+2025-12-16 15:58:03.797 INFO  [c8b5c8e8-a51e-4296-b967-18ac708232b4] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/swagger-ui.css with status 200 in 4 ms
+2025-12-16 15:58:03.799 INFO  [295f854c-f9f5-4b3a-b0ff-769ad0100161] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/swagger-ui-standalone-preset.js with status 200 in 6 ms
+2025-12-16 15:58:03.804 INFO  [768b6fac-de07-4d3f-80ca-0c59a2224fcd] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/swagger-initializer.js with status 200 in 11 ms
+2025-12-16 15:58:03.807 INFO  [a10ef280-8322-4ae5-8738-8e58cf4ab937] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/swagger-ui-bundle.js with status 200 in 14 ms
+2025-12-16 15:58:03.871 INFO  [d0b4f399-52e1-4d47-9dfc-3210ae83a415] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/swagger-config from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.873 INFO  [ee515410-3e41-469f-bfd6-a62d68a29aae] m.p.logging.RequestLoggingFilter - Incoming GET /swagger-ui/swagger-ui/favicon-32x32.png from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:03.877 INFO  [ee515410-3e41-469f-bfd6-a62d68a29aae] m.p.logging.RequestLoggingFilter - Completed GET /swagger-ui/swagger-ui/favicon-32x32.png with status 200 in 4 ms
+2025-12-16 15:58:03.881 INFO  [d0b4f399-52e1-4d47-9dfc-3210ae83a415] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/swagger-config with status 200 in 10 ms
+2025-12-16 15:58:03.892 INFO  [3a1bc9b2-1421-477c-a8b1-d7b29468223a] m.p.logging.RequestLoggingFilter - Incoming GET /v3/api-docs/pisici from 0:0:0:0:0:0:0:1
+2025-12-16 15:58:04.065 INFO  [3a1bc9b2-1421-477c-a8b1-d7b29468223a] m.p.logging.RequestLoggingFilter - Completed GET /v3/api-docs/pisici with status 200 in 173 ms

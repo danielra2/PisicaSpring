@@ -231,31 +231,21 @@ databaseChangeLog:
               - column: {name: varsta, valueNumeric: 6}
               - column: {name: nume, value: "River"}
   - changeSet:
-      id: 003-create-query-audit-table
+      id: 003-add-pisica-audit-columns
       author: codex
       changes:
-        - createTable:
-            tableName: query_audit_log
+        - addColumn:
+            tableName: pisica
             columns:
-              - column:
-                  name: id
-                  type: BIGINT
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: endpoint
-                  type: VARCHAR(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: metadata
-                  type: VARCHAR(2048)
-                  constraints:
-                    nullable: false
               - column:
                   name: created_at
                   type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
                   constraints:
                     nullable: false

@@ -24,5 +24,9 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
 
-server:
-  port: 8085
+springdoc:
+  swagger-ui:
+    path: /swagger-ui/index.html
+    display-request-duration: true
+  api-docs:
+    path: /v3/api-docs
