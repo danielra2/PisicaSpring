@@ -1,5 +1,8 @@
 package mycode.pisicaspring.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import mycode.pisicaspring.dtos.PisicaListResponsePageable;
+import mycode.pisicaspring.dtos.PisicaResponse;
 import mycode.pisicaspring.models.Pisica;
 import mycode.pisicaspring.repository.PisicaRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,11 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -28,6 +33,9 @@ class PisicaControllerIT {
     @Autowired
     private PisicaRepository repository;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @BeforeEach
     void setup() {
         repository.deleteAll();
@@ -38,27 +46,36 @@ class PisicaControllerIT {
         repository.save(pisica("Siamese", 2, "Luna"));
         repository.save(pisica("British", 4, "Maya"));
 
-        mockMvc.perform(get("/api/pisici")
+        MvcResult result = mockMvc.perform(get("/api/pisici")
                         .param("page", "0")
                         .param("size", "1"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.pisicaDtoList[0].nume").value("Luna"))
-                .andExpect(jsonPath("$.totalElements").value(2));
+                .andReturn();
+
+        PisicaListResponsePageable response = objectMapper.readValue(
+                result.getResponse().getContentAsByteArray(),
+                PisicaListResponsePageable.class
+        );
+        assertThat(response.totalElements()).isEqualTo(2);
+        assertThat(response.pisicaDtoList()).hasSize(1);
+        assertThat(response.pisicaDtoList().get(0).nume()).isEqualTo("Luna");
     }
 
     @Test
     void createPisicaEndpointPersistsEntity() throws Exception {
-        String payload = "{" +
-                "\"rasa\":\"Sphynx\"," +
-                "\"varsta\":3," +
-                "\"nume\":\"Zoe\"" +
-                "}";
+        Pisica payload = pisica("Sphynx", 3, "Zoe");
 
-        mockMvc.perform(post("/api/pisici/add")
+        MvcResult result = mockMvc.perform(post("/api/pisici/add")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(payload))
+                        .content(objectMapper.writeValueAsBytes(payload)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.nume").value("Zoe"));
+                .andReturn();
+
+        PisicaResponse response = objectMapper.readValue(
+                result.getResponse().getContentAsByteArray(),
+                PisicaResponse.class
+        );
+        assertThat(response.nume()).isEqualTo("Zoe");
 
         assertThat(repository.findByNume("Zoe")).isPresent();
     }
@@ -67,12 +84,18 @@ class PisicaControllerIT {
     void invalidSortParameterShouldReturnBadRequest() throws Exception {
         repository.save(pisica("Siamese", 2, "Luna"));
 
-        mockMvc.perform(get("/api/pisici")
+        MvcResult result = mockMvc.perform(get("/api/pisici")
                         .param("page", "0")
                         .param("size", "1")
                         .param("sort", "string"))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.error").value("Parametrii furnizati sunt invalizi."));
+                .andReturn();
+
+        Map<String, Object> response = objectMapper.readValue(
+                result.getResponse().getContentAsByteArray(),
+                Map.class
+        );
+        assertThat(response.get("error")).isEqualTo("Parametrii furnizati sunt invalizi.");
     }
 
     private Pisica pisica(String rasa, int varsta, String nume) {
